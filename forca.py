@@ -27,7 +27,7 @@ print(" ".join(palavra))
 # repete enquanto ainda há tentativas restantes e a palavra ainda não foi descoberta
 while (tentativa > 0) and (palavrasecreta != palavra):
   
-  print(f'\n\n\nTentativas restantes: {tentativa}')
+  print(f'\n\nTentativas restantes: {tentativa}')
   palpite = input("\nDigite uma letra: ")
   palpite = palpite.upper(); # para o jogo funcionar tanto com letras minúsculas, quanto maiúsculas
 
@@ -37,7 +37,7 @@ while (tentativa > 0) and (palavrasecreta != palavra):
       palavra[posicao] = palpite
 
   # ao final do palpite, imprime a palavra atualizada: se há a ocorrência da letra, ela preenche as posições. caso contrário, continua vazia
-  print(" ".join(palavra))
+  print(f'\n{" ".join(palavra)}')
   tentativa -= 1
 
 # caso o jogador perca, ou seja, a palavra não foi adivinhada e o número de tentativas acabou
@@ -48,4 +48,4 @@ if (tentativa <= 0) and (palavrasecreta != palavra):
 # quando o jogador ganha, acertou a palavra dentro do número de tentativas!
 elif palavrasecreta == palavra:
   print("\n\n₊˚ʚᗢ₊˚✧ﾟ。VENCEDOR ₊˚ʚᗢ₊˚✧ﾟ。\n")
-  print("Oba! Parabéns! Você acertou a palavra!\n\n")
+  print("Oba! Parabéns! Você acertou a palavra! :D\n\n")
