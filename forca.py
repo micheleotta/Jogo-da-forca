@@ -29,14 +29,15 @@ while (tentativa > 0) and (palavrasecreta != palavra):
   
   print(f'\n\nTentativas restantes: {tentativa}')
   palpite = input("\nDigite uma letra: ")
-  palpite = palpite.upper(); # para o jogo funcionar tanto com letras minúsculas, quanto maiúsculas
+  palpite = palpite.upper() # para o jogo funcionar tanto com letras minúsculas, quanto maiúsculas
 
   # checa se a letra inserida está presente na palavra
   for posicao in range(numeroletras):
     if palpite == palavrasecreta[posicao]:
       palavra[posicao] = palpite
 
-  # ao final do palpite, imprime a palavra atualizada: se há a ocorrência da letra, ela preenche as posições. caso contrário, continua vazia
+  # ao final do palpite, imprime a palavra atualizada: 
+  # se há a ocorrência da letra, ela preenche as posições. caso contrário, continua vazia
   print(f'\n{" ".join(palavra)}')
   tentativa -= 1
 
